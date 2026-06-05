@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const api = axios.create({
     baseURL: 'https://backend-zuul--harry-hcx.replit.app',
-    withCredentials: true
+    withCredentials: false
 })
 
 // 2. 全局请求拦截器：自动添加 Token（如果有的话）
@@ -25,7 +25,7 @@ export const playerApi = {
     // 登录
     login: data => api.post('/player/login', data),
     // 注册
-    register: data => api.post('/player/register', data),
+    register: data => {api.post('/player/register', data)},
     // 获取玩家信息
     getInfo: () => {
         const playerId = localStorage.getItem('playerId')
