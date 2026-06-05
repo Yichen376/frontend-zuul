@@ -25,7 +25,7 @@ export const playerApi = {
     // 登录
     login: data => api.post('/player/login', data),
     // 注册
-    register: data => {api.post('/player/register', data)},
+    register: data => api.post('/player/register', data),
     // 获取玩家信息
     getInfo: () => {
         const playerId = localStorage.getItem('playerId')
