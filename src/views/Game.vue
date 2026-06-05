@@ -182,15 +182,15 @@ const playerInfoRef = ref<InstanceType<typeof PlayerInfo> | null>(null)
 
 /* ---------- 当前房间名称对应的背景图映射 ---------- */
 const roomBackgroundMap: Record<string, string> = {
-    入口大厅: '/images/entrance_hall.png',
-    古书图书馆: '/images/library.png',
-    炼金实验室: '/images/alchemy_lab.png',
-    兵器库: '/images/armory.png',
-    机关走廊: '/images/mechanism_corridor.png',
-    监狱牢房: '/images/prison_cell.png',
-    秘密宝藏室: '/images/treasure_room.png',
-    传送房间: '/images/teleport_room.png',
-    最终祭坛: '/images/final_altar.png'
+    入口大厅: 'images/entrance_hall.png',
+    古书图书馆: 'images/library.png',
+    炼金实验室: 'images/alchemy_lab.png',
+    兵器库: 'images/armory.png',
+    机关走廊: 'images/mechanism_corridor.png',
+    监狱牢房: 'images/prison_cell.png',
+    秘密宝藏室: 'images/treasure_room.png',
+    传送房间: 'images/teleport_room.png',
+    最终祭坛: 'images/final_altar.png'
     // 如果出现新房间，请在这里继续补充对应图片
 }
 
@@ -202,7 +202,7 @@ const roomBackgroundMap: Record<string, string> = {
  */
 const backgroundStyle = computed(() => {
     const imgPath =
-        roomBackgroundMap[currentRoom.roomName] || '/images/entrance_hall.png'
+        roomBackgroundMap[currentRoom.roomName] || 'images/entrance_hall.png'
     return {
         backgroundColor: '#1a1a2e',
         backgroundImage: `url('${imgPath}')`,

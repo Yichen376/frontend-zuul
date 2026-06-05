@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'https://41f8dad2-2a97-4d0a-a806-f3510003b242-00-2dfbyc5q7h1yc.kirk.replit.dev',
+    baseURL: 'https://backend-zuul--harry-hcx.replit.app',
     withCredentials: true
 })
 
