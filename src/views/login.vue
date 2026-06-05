@@ -381,12 +381,14 @@ async function handleRegister() {
         const form = new FormData()
         form.append('playerName', registerData.username)
         form.append('password', registerData.password)
-        form.append('avatar', avatarFile.value)
+        if (avatarFile.value) {
+            form.append('avatar', avatarFile.value)
+        }
 
         console.log('Sending registration data:', {
             playerName: registerData.username,
-            avatarFile: avatarFile.value.name,
-            fileSize: (avatarFile.value.size / 1024).toFixed(2) + 'KB'
+            avatarFile: avatarFile.value?.name || '无',
+            fileSize: avatarFile.value ? (avatarFile.value.size / 1024).toFixed(2) + 'KB' : '无'
         })
 
         await playerApi.register(form)
