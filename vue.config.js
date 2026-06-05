@@ -7,7 +7,7 @@ module.exports = defineConfig({
     // 部署路径（根路径）
     publicPath: '/frontend-zuul',
     // 打包输出目录
-    outputDir: 'dist',
+    outputDir: 'docs',
     // 静态资源（js/css/img/font等）存放的子目录
     assetsDir: 'static',
     // 生产环境关闭 source map（减小体积、避免源码泄露）
