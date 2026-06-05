@@ -23,3 +23,5 @@ pnpm-debug.log*
 
 # Ignore backend folder
 /backend/
+
+*.zip
